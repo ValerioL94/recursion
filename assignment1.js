@@ -17,9 +17,9 @@ function fibs(n) {
 }
 console.log(fibs(8));
 
-// recursion;
+// recursion
 function fibsRec(n) {
-  if (n < 0) return null;
+  if (n < 0) return [];
   if (n == 0) return [0];
   if (n == 1) return [0, 1];
   const arr = fibsRec(n - 1);
