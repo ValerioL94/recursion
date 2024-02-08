@@ -1,12 +1,9 @@
-//iteration
+// iteration
 function fibs(n) {
-  if (n <= 0) return 0;
-  if (n == 1) return 1;
-  let a = 0;
-  let b = 1;
+  let [a, b] = [0, 1];
+  let c;
   let array = [];
-  for (let i = 0; i <= n; ++i) {
-    let c;
+  for (let i = 0; i <= n; i++) {
     if (i == 0) c = 0;
     else if (i == 1) c = 1;
     else {
@@ -20,9 +17,10 @@ function fibs(n) {
 }
 console.log(fibs(8));
 
-//recursion
+// recursion;
 function fibsRec(n) {
-  if (n <= 0) return [0];
+  if (n < 0) return null;
+  if (n == 0) return [0];
   if (n == 1) return [0, 1];
   const arr = fibsRec(n - 1);
   return [...arr, arr[n - 1] + arr[n - 2]];
